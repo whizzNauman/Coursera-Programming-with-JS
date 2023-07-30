@@ -178,7 +178,7 @@ Found the t at 3
 //         }
 //     }
 // }
-// letterFinder('test', 't');
+// letterFinder('nauman', 'n');
 
 // Object literals and the Brackets Notation
 
@@ -287,4 +287,219 @@ Video (Mix): Objects
 
 // var test = typeof(function abc(){ console.log('abc'); });
 
-console.log(test);
+// console.log(test);
+
+//-----------------------------------------
+
+// error handling
+
+
+// function addTwoNums (a, b) {
+//     try {
+//         if(typeof (a) != 'number'){
+//             throw new ReferenceError('the first argument is not a number');
+//         }else if (typeof (b) != 'number'){
+//             throw new ReferenceError('the second argument is not a number');
+//         }else{
+//             console.log(a + b);
+//         }
+//     }catch (err){
+//         console.log("Error!", err);
+//     }
+
+// }
+// addTwoNums(5 , '5');
+
+// console.log('It still works');
+
+
+
+
+
+// function letterFinder (word, match){
+//     var condition1 = typeof(word) == 'string' && word.length >= 2;
+//     var condition2 = typeof (match) == 'string' && match.length == 1;
+//     if(condition1 == true && condition2 == true) {
+//     for (var i = 0; i < word.length; i++) {
+//         if(word[i] == match){
+//             //if the current character at position i in the word is equal to match
+//             console.log('Found the ', match, 'at', i);
+//         }else{
+//             console.log('---No match found at', i);
+//             }
+//         }
+
+//     }else{
+//         console.log('Please pass correct arguments to the function.');
+//     }
+
+// }
+// letterFinder(4, 7);
+// letterFinder("cat", "c");
+
+
+// var result = null;
+// console.log(result)
+
+// try {
+//     console.log('hello);
+// }catch (e){
+//     console.log('shit');
+// }
+
+// throw new Error();
+// console.log("Hello");
+
+// try {
+//     throw new Error();
+//     console.log('hello');
+// }catch (err){
+//     console.log('shit');
+// }
+
+// var str = "Hello";
+// str.match("jello");
+
+// The functional programming paradigm - Week 3
+
+// function addTwoNums(a, b) {
+//     console.log(a + b)
+// }
+
+// function randomNum() {
+//     return Math.floor((Math.random() * 10) + 1);
+// }
+// function specificNum() { 
+//     return 42 
+// };
+
+// var useRandom = true;
+
+// var getNumber;
+// debugger;
+// if(useRandom) {
+//     debugger;
+//     getNumber = randomNum
+//     debugger;
+// } else {
+//     getNumber = specificNum
+// }
+
+// addTwoNums(getNumber(), getNumber())
+
+//Task 1: Build a function-based console log message generator
+function consoleStyler(color, background, fontSize, txt) {
+    var message = "%c" + txt;
+    var style = `color: ${color};`
+    style += `background: ${background};`
+    style += `font-size: ${fontSize};`
+    console.log(message, style);
+}
+
+// Task 2: Build another console log message generator
+function celebrateStyler(reason) {
+    var fontStyle = "color: tomato; font-size: 50px";
+    if (reason == "birthday") {
+        console.log(`%cHappy birthday`, fontStyle);
+    } 
+    else if (reason == "champions") {
+        console.log(`%cCongrats on the title`, fontStyle);
+    } 
+    else {
+       console.log(message, style); 
+    }
+}
+
+// Task 3: Run both the consoleStyler and the celebrateStyler functions
+consoleStyler('#1d5c63', '#ede6db', '40px', 'Congrats!');
+celebrateStyler('birthday');
+
+// Task 4: Insert a congratulatory and custom messages
+function styleAndCelebrate(color, background, fontSize, txt, reason) {
+    consoleStyler(color, background, fontSize, txt);
+    celebrateStyler(reason);
+}
+// Call styleAndCelebrate   
+styleAndCelebrate('ef7c8e', 'fae8e0', '30px', 'You made it!', 'champions');
+
+
+// // Task 1: Build a function-based console log message generator
+// function consoleStyler(color, background, fontSize, txt) {
+//     var message = "%c" + txt;
+//     var style = `color: ${color};`;
+//     style += `background: ${background};`;
+//     style += `font-size: ${fontSize};`;
+//     console.log(message, style);
+// }
+// //Lesson learnt about the test two
+// // Task 2: Build another console log message generator
+// function celebrateStyler(reason) {
+//     if (typeof (reason) !== "string") {
+//         throw TypeError("reason is not string");
+//     } try {
+//         var fontStyle = "color: tomato; font-size: 50px";
+//         if (reason == "birthday") {
+//             console.log(`%cHappy birthday`, fontStyle);
+//         } else if (reason == "champions") {
+//             console.log(`%cCongrats on the title`, fontStyle);
+//         } else {
+//             console.log(message, style);
+//         }
+        
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+
+// // Task 3: Run both the consoleStyler and the celebrateStyler functions
+// consoleStyler('#1d5c63', '#ede6db', '40px', 'Congrats!');
+// celebrateStyler('birthday');
+
+// // Task 4: Insert a congratulatory and custom messages
+// function styleAndCelebrate(color, background, fontSize, txt, reason) {
+//     consoleStyler(color, background, fontSize, txt);
+//     celebrateStyler(reason);
+// }
+// // Call styleAndCelebrate
+// styleAndCelebrate('#ef7c8e', '#fae8e0', '30px', 'You made it!', 'champions');
+
+//============Task 1 Test Passed Successfully===========
+
+// Task 1: Build a function-based console log message generator
+function consoleStyler(color,background ,fontSize,txt) {
+    var message = "%c" + txt;
+    var style = `color: ${color};`
+    style += `background: ${background};`
+    style += `font-size: ${fontSize};`
+    console.log(message, style);
+}
+
+// Task 2: Build another console log message generator
+function celebrateStyler(reason) {
+
+    var fontStyle = "color: tomato; font-size: 50px";
+    if ( reason == "birthday")
+    {
+     console.log(`%cHappy birthday`, fontStyle);
+    }
+    else if (reason == "champions") {
+        console.log(`%cCongrats on the title!`, fontStyle);
+    }
+    else {
+        console.log(reason,fontStyle);
+    }
+}
+
+// Task 3: Run both the consoleStyler and the celebrateStyler functions
+consoleStyler('#1d5c63', '#ede6db', '40px', 'Congrats!');
+celebrateStyler('birthday');
+
+
+// // Task 4: Insert a congratulatory and custom message
+function styleAndCelebrate(color, background, fontSize, txt ,reason) {
+consoleStyler(color, background, fontSize, txt);
+celebrateStyler(reason);
+}
+// Call styleAndCelebrate
+
+styleAndCelebrate('ef7c8e','fae8e0','30px','You made it!','champions');
